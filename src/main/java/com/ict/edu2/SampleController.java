@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
 
 
 
@@ -88,5 +91,20 @@ public class SampleController {
 
        
     }
+
+
+    //반환형이 객체일 때
+    @PostMapping("/hi")
+    public String getHi() {
+       
+        
+        return "hi, 안녕, ㅎㅇㅎㅇㅎㅇ" ;
+    }
+    
+    @PostMapping("/hi2")
+    public String[] getHi2(String idx) {
+        return new String[] {"Hello", "World"};
+    }
+    
     
 }
